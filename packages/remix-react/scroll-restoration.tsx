@@ -99,7 +99,8 @@ function useScrollRestoration() {
 
       // try to scroll to the hash
       if (location.hash) {
-        let el = document.querySelector(location.hash);
+        const hashContent = location.hash.slice(1);
+        let el = document.getElementById(hashContent);
         if (el) {
           el.scrollIntoView();
           return;
